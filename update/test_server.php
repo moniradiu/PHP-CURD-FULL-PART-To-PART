@@ -41,7 +41,8 @@ if(isset($_POST['update'])){
 	$name=$_POST['name'];
 	$address=$_POST['address'];
 	$mobile=$_POST['mobile'];
-	mysqli_query($db,"UPDATE SET `info_test` name=$name,address=$address,mobile=$mobile WHERE id=$id");
+	mysqli_query($db,"UPDATE `info_test` SET name='$name',address='$address',mobile='$mobile' WHERE id=$id");
+	//print_r($_POST); die();
 	echo "Successfully Data Updated";
 }
 
